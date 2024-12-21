@@ -1,3 +1,5 @@
+package ctrl;
+
 public class Loops5 {
     public static void main(String[] args) {
         // for()문
