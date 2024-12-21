@@ -11,6 +11,22 @@ public class Loops5 {
             System.out.println("i = " + i);
         }
 
+        for(int i=0; i<10; i+=2) {
+            System.out.println("i의 값 : " + i);
+        }
+
+        int total = 0;
+        for(int i=1; i<=10; i++) {
+            total += i;
+        }
+        System.out.println("total = " + total);
+
+        total = 0;
+        for(int i=1; i<10; i+=2) {
+            total += i;
+        }
+        System.out.println("total = " + total);
+
         int i = 0;
         while( i < 5 ) {
             System.out.println("i = " + i);
