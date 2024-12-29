@@ -11,18 +11,48 @@ public class Person {
     private String name;    // 이름 데이터
     private float height;
 
+
     // 생성자 : 클래스명과 같음, 객체가 생성될때 한번 호출됨
     public Person(String n, float h, int a) {
         age = a;
         name = n;
         height = h;
-
-        System.out.println("Person 클래스로부터 객체가 생성됨");
+//        System.out.println("Person 클래스로부터 객체가 생성됨");
     }
 
     // 행위(Method, Member function)
     public void introduce() {
         System.out.println("안녕하세요, 저는 " + name + "이고,");
         System.out.println("나이는 " + age + "살 입니다");
+    }
+
+    public void setAge(int age) {
+        if (age < 0)
+            return;
+
+        this.age = age;
+    }
+
+    public void setName(String name) {
+        if (name.isEmpty())
+            return;
+
+        this.name = name;
+    }
+
+    public void setHeight(float height) {
+        this.height = height;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public float getHeight() {
+        return height;
+    }
+
+    public String getName() {
+        return name;
     }
 }
