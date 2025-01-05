@@ -1,4 +1,4 @@
-package cls;
+package cls.unittest;
 
 public class Marine extends Unit {
     // steampack : 논리형(boolean), 접근금지
@@ -22,7 +22,9 @@ public class Marine extends Unit {
         else
             setPower( 10 );
 
-        super.attack(target);   // 부모 클래스의 attack을 호출
+    }
+
+    public void damage(int power) {
     }
 }
 

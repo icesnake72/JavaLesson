@@ -1,6 +1,7 @@
 package ctrl;
 
 import java.util.Scanner;
+import cls.animal.Dog;
 
 public class Controller {
     public static void main(String[] args) {
@@ -211,5 +212,7 @@ public class Controller {
 
 
         sc.close();
+
+
     }
 }

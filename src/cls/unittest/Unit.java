@@ -1,4 +1,4 @@
-package cls;
+package cls.unittest;
 
 /*
  * 클래스 이름 : Unit
@@ -9,7 +9,7 @@ package cls;
  * "X, Y위치로 이동합니다." 콘솔에 출력
  * */
 
-public class Unit {
+public abstract class Unit {
     private int hp;
     private int power;
     private String name;
@@ -32,6 +32,9 @@ public class Unit {
     public void move(int x, int y) {
         System.out.printf("(%d, %d)위치로 이동합니다.\n", x, y);
     }
+
+    public abstract void damage(int power);
+    public abstract void attack(Unit target);
 
     // 메소드의 정의 방법
     // 접근제한자 반환형 메소드이름(매개변수들...)
@@ -70,16 +73,5 @@ public class Unit {
 
         this.power = power;
     }
-
-    public void damage(int power) {
-        hp -= power;
-        System.out.printf("%s의 hp : %d\n", name, hp);
-    }
-
-    public void attack(Unit target) {
-        target.damage(power);
-        System.out.printf("%s가 %s를 공격함\n", name, target.getName());
-    }
 }
 
-// Marine
